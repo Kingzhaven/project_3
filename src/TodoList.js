@@ -41,28 +41,24 @@ const TodoList = () => {
                     value={newTodo}
                     onChange={(e) => setNewTodo(e.target.value)}
                     placeholder="Add new todo"
-                    className="todo-input"
-                />
+                    className="todo-input" />
                 <button type="submit" className="todo-button">Add</button>
             </form>
 
             <div className="filter-container">
                 <button
                     className={`filter-button ${filter === 'all' ? 'active' : ''}`}
-                    onClick={() => setFilter('all')}
-                >
+                    onClick={() => setFilter('all')} >
                     Show All
                 </button>
                 <button
                     className={`filter-button ${filter === 'completed' ? 'active' : ''}`}
-                    onClick={() => setFilter('completed')}
-                >
+                    onClick={() => setFilter('completed')} >
                     Show Completed
                 </button>
                 <button
                     className={`filter-button ${filter === 'remaining' ? 'active' : ''}`}
-                    onClick={() => setFilter('remaining')}
-                >
+                    onClick={() => setFilter('remaining')} >
                     Show Remaining
                 </button>
             </div>
@@ -74,8 +70,7 @@ const TodoList = () => {
                             type="checkbox"
                             checked={todo.completed}
                             onChange={() => handleToggleCompleted(index)}
-                            className="todo-checkbox"
-                        />
+                            className="todo-checkbox" />
                         <span className={todo.completed ? 'todo-text completed' : 'todo-text'}>
                             {todo.text}
                         </span>
